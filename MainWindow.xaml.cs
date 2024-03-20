@@ -61,9 +61,20 @@ namespace Wpf_Login
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtEmail.Text) && !string.IsNullOrEmpty(txtPassword.Password))
+            string userName = txtEmail.Text;
+            string Password = txtPassword.Password;
+
+            if (userName == "willy" && Password == "666")
             {
-                MessageBox.Show("登入成功");
+                index index = new index();
+                index.Show();
+
+                this.Hide();
+            }
+            else
+            {
+                txtEmail.Text = "";
+                txtPassword.Password = "";
             }
         }
 
