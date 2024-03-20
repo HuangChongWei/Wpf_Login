@@ -32,3 +32,5 @@ D:\BS\WPF\Wpf_Login\Wpf_Login\obj\Debug\Wpf_Login.csproj.GenerateResource.cache
 D:\BS\WPF\Wpf_Login\Wpf_Login\obj\Debug\Wpf_Login.csproj.CoreCompileInputs.cache
 D:\BS\WPF\Wpf_Login\Wpf_Login\obj\Debug\Wpf_Login.exe
 D:\BS\WPF\Wpf_Login\Wpf_Login\obj\Debug\Wpf_Login.pdb
+D:\BS\WPF\Wpf_Login\Wpf_Login\obj\Debug\index.g.cs
+D:\BS\WPF\Wpf_Login\Wpf_Login\obj\Debug\index.baml
