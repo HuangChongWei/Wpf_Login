@@ -59,12 +59,15 @@ namespace Wpf_Login
             }
         }
 
+        public string UserName { get; set; }
+        public string Password { get; set; }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string userName = txtEmail.Text;
-            string Password = txtPassword.Password;
+            //string UserName = txtEmail.Text;
+            //string Password = txtPassword.Password;
 
-            if (userName == "willy" && Password == "666")
+            if (UserName == "willy" && Password == "666")
             {
                 index index = new index();
                 index.Show();

@@ -64,7 +64,7 @@
 
                         <Image Source="/Images/email.jpg" Height="20" />
                         <TextBlock x:Name="textEmail" MouseDown="textEmail_MousDown" Text="Email" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}" />
+                        <TextBox Text="{Binding UserName}" x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}" />
                     </Grid>
                 </Border>
                 <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
