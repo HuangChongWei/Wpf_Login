@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Wpf_Login
 {
@@ -21,9 +23,16 @@ namespace Wpf_Login
     /// </summary>
     public partial class MainWindow : Window
     {
+        LoginVM loginVM;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            loginVM = new LoginVM();
+
+            //loginModel = new LoginModel();
+            this.DataContext = loginVM;
         }
 
         private void textEmail_MousDown(object sender, MouseButtonEventArgs e)
@@ -59,28 +68,6 @@ namespace Wpf_Login
             }
         }
 
-        public string UserName { get; set; }
-        public string Password { get; set; }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //string UserName = txtEmail.Text;
-            //string Password = txtPassword.Password;
-
-            if (UserName == "willy" && Password == "666")
-            {
-                index index = new index();
-                index.Show();
-
-                this.Hide();
-            }
-            else
-            {
-                txtEmail.Text = "";
-                txtPassword.Password = "";
-            }
-        }
-
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -93,5 +80,20 @@ namespace Wpf_Login
         {
             Application.Current.Shutdown();
         }
+
+
+
+        public string MyPasswordVM
+        {
+            get { return (string)GetValue(MyPasswordVMProperty); }
+            set { SetValue(MyPasswordVMProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MyPasswordVM.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MyPasswordVMProperty =
+            DependencyProperty.Register("MyPasswordVM", typeof(string), typeof(MainWindow));
+
+
+
     }
 }

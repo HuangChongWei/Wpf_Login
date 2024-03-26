@@ -79,7 +79,7 @@
                         <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}"/>
                     </Grid>
                 </Border>
-                <Button Content="登入" Click="Button_Click" Style="{StaticResource mainbutton}"/>
+                <Button Content="登入" Command="{Binding LoginAction}" Style="{StaticResource mainbutton}"/>
             </StackPanel>
         </Border>
         
